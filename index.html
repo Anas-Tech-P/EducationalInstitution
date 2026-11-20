@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+    <style>
+        /* পেজের বাড়তি মার্জিন ও স্ক্রলবার বন্ধ করার জন্য */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        /* উপরের Google Apps Script সতর্কবার্তা হাইড করার টেকনিক */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        iframe {
+            position: absolute;
+            top: -32px; /* উপরের ব্যানারটি ঢেকে দেওয়ার জন্য */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 32px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="iframe-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbwEKECVN9znsBuIFt94Xn8fGD-tfQGIf6ttpI3sX7Fn1XakpJtpgvcRqJSRAwD_N0-5DQ/exec" 
+            allow="geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write;"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>
